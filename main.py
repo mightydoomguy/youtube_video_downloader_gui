@@ -48,7 +48,7 @@ class App(Frame):
         self.btn.grid(row=3, column=2)
         #--------------------------------------------------------
         self.btn1 = Button(self)
-        self.btn1["text"] = "download playlist"
+        self.btn1["text"] = "download playlist (not work)"
         self.btn1["command"] = self.download_playlist
         self.btn1["width"] = 14
         self.btn1["height"] = 1
