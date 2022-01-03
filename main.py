@@ -1,4 +1,4 @@
-from pytube import YouTube,Playlist
+from pytube import YouTube
 from tkinter import *
 class App(Frame):
     def __init__(self,video):
@@ -12,10 +12,10 @@ class App(Frame):
         filename = self.filename.get()
         filters.get_highest_resolution().download(output_path=path,filename=filename)
 
-    def download_playlist(self):#Нуждается в доработке поскольку недопилен
-        url = Playlist(self.urlbox.get())
-        path = self.urlbox1.get()
-        url.download_all(download_path=path)
+    #def download_playlist(self):#Нуждается в доработке поскольку недопилен
+     #   url = Playlist(self.urlbox.get())
+      #  path = self.urlbox1.get()
+       # url.download_all(download_path=path)
     def widget(self):
         #---------------------------------------------------------
         self.lbl = Label(self, text="Enter youtube url:")
@@ -47,14 +47,14 @@ class App(Frame):
         self.btn["fg"] = "white"
         self.btn.grid(row=3, column=2)
         #--------------------------------------------------------
-        self.btn1 = Button(self)
-        self.btn1["text"] = "download playlist (not work)"
-        self.btn1["command"] = self.download_playlist
-        self.btn1["width"] = 14
-        self.btn1["height"] = 1
-        self.btn1["bg"] = "black"
-        self.btn1["fg"] = "white"
-        self.btn1.grid(row=4, column=2)
+       # self.btn1 = Button(self)
+        #self.btn1["text"] = "download playlist (not work)"
+        #self.btn1["command"] = self.download_playlist
+        #self.btn1["width"] = 14
+        #self.btn1["height"] = 1
+        #self.btn1["bg"] = "black"
+        #self.btn1["fg"] = "white"
+        #self.btn1.grid(row=4, column=2)
         #--------------------------------------------------------
 root = Tk()
 root.title('video_downloader')
